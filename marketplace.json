@@ -1,0 +1,13 @@
+{
+  "name": "agent-trace-triage-marketplace",
+  "owner": {
+    "name": "Cluade-Code-Skill Contributors"
+  },
+  "plugins": [
+    {
+      "name": "agent-trace-triage",
+      "source": ".",
+      "description": "Triage failed AI agent traces — loop detection, failure classification, regression tests."
+    }
+  ]
+}

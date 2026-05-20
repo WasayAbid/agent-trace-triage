@@ -1,0 +1,6 @@
+node_modules/
+tests/tmp-triage-report.md
+.claude/triage-report.md
+triage-report.md
+*.log
+.DS_Store

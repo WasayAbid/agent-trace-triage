@@ -1,0 +1,6 @@
+{"type":"tool_call","tool":"fetch_order","arguments":{"id":1},"step":1,"status":"ok"}
+{"type":"tool_call","tool":"validate_order","arguments":{"id":1},"step":2,"status":"ok"}
+{"type":"tool_call","tool":"fetch_order","arguments":{"id":1},"step":3,"status":"ok"}
+{"type":"tool_call","tool":"validate_order","arguments":{"id":1},"step":4,"status":"ok"}
+{"type":"tool_call","tool":"fetch_order","arguments":{"id":1},"step":5,"status":"ok"}
+{"type":"tool_call","tool":"validate_order","arguments":{"id":1},"step":6,"status":"ok"}

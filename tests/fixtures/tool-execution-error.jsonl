@@ -1,0 +1,2 @@
+{"type":"tool_call","tool":"get_weather","arguments":{"city":"Paris"},"step":1,"status":"ok"}
+{"type":"tool_call","tool":"send_email","arguments":{"to":"a@b.com"},"step":2,"status":"error","error":"SMTP connection refused"}

@@ -1,0 +1,17 @@
+{
+  "name": "agent-trace-triage",
+  "version": "1.0.0",
+  "description": "Triage failed AI agent traces: detect tool loops, classify failures, generate regression tests.",
+  "author": {
+    "name": "Cluade-Code-Skill Contributors"
+  },
+  "homepage": "https://github.com/your-org/agent-trace-triage",
+  "license": "MIT",
+  "keywords": [
+    "agents",
+    "debugging",
+    "tool-calling",
+    "langgraph",
+    "observability"
+  ]
+}

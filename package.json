@@ -1,0 +1,16 @@
+{
+  "name": "agent-trace-triage-plugin",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Claude Code plugin — triage failed AI agent traces",
+  "type": "module",
+  "scripts": {
+    "test": "node --test tests/scripts.test.mjs",
+    "triage:example": "node skills/agent-trace-triage/scripts/triage.mjs examples/sample-failed-trace.jsonl",
+    "loops:example": "node skills/agent-trace-triage/scripts/detect-loops.mjs examples/sample-failed-trace.jsonl --json"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "license": "MIT"
+}

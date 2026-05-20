@@ -1,0 +1,5 @@
+{"type":"tool_call","tool":"vector_search","arguments":{"query":"reset password"},"step":1,"status":"ok"}
+{"type":"tool_call","tool":"vector_search","arguments":{"query":"reset password"},"step":2,"status":"ok"}
+{"type":"tool_call","tool":"vector_search","arguments":{"query":"reset password"},"step":3,"status":"ok"}
+{"type":"tool_call","tool":"vector_search","arguments":{"query":"reset password"},"step":4,"status":"ok"}
+{"type":"tool_call","tool":"create_ticket","arguments":{"title":"help"},"step":5,"status":"error","error":"duplicate ticket"}

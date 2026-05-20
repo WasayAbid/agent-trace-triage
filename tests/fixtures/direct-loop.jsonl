@@ -1,0 +1,4 @@
+{"type":"tool_call","tool":"search_database","arguments":{"query":"user@example.com"},"step":1,"status":"ok"}
+{"type":"tool_call","tool":"search_database","arguments":{"query":"user@example.com"},"step":2,"status":"ok"}
+{"type":"tool_call","tool":"search_database","arguments":{"query":"user@example.com"},"step":3,"status":"ok"}
+{"type":"tool_call","tool":"search_database","arguments":{"query":"user@example.com"},"step":4,"status":"ok"}

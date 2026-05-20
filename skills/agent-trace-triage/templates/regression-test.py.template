@@ -1,0 +1,60 @@
+"""
+Regression test generated from agent trace triage.
+Incident: {{INCIDENT_ID}}
+Trace: {{TRACE_FILE}}
+Bucket: {{BUCKET}}
+"""
+from __future__ import annotations
+
+import json
+from pathlib import Path
+
+import pytest
+
+TRACE_PATH = Path("{{TRACE_FILE}}")
+INCIDENT_ID = "{{INCIDENT_ID}}"
+
+
+def _load_tool_calls():
+    """Minimal parser for test assertion — full logic in detect-loops.mjs."""
+    calls = []
+    if not TRACE_PATH.exists():
+        pytest.skip(f"Trace file missing: {TRACE_PATH}")
+    for line in TRACE_PATH.read_text(encoding="utf-8").splitlines():
+        line = line.strip()
+        if not line:
+            continue
+        row = json.loads(line)
+        if row.get("type") in ("tool_call", "tool", "execute_tool"):
+            calls.append(row.get("tool") or row.get("tool_name") or row.get("name"))
+    return calls
+
+
+def test_no_unbounded_tool_loop():
+    """After fix, re-export trace and ensure identical repeats stay below threshold."""
+    calls = _load_tool_calls()
+    if len(calls) < 3:
+        pytest.skip("Trace too short — record a longer failing run first")
+
+    max_repeat = 1
+    streak = 1
+    for i in range(1, len(calls)):
+        same = calls[i] == calls[i - 1]
+        streak = streak + 1 if same else 1
+        max_repeat = max(max_repeat, streak)
+
+    assert max_repeat < 3, (
+        f"Tool loop still present (max consecutive identical tool name = {max_repeat}). "
+        f"Re-run agent and export a new trace."
+    )
+
+
+def test_{{INCIDENT_ID}}_behavior_fixed():
+    """
+    TODO: Replace with a deterministic assertion on your agent entrypoint.
+    Example: run agent with fixed input and assert output contains / does not contain X.
+    """
+    # from my_agent import run_agent
+    # result = run_agent("{{SAMPLE_USER_PROMPT}}")
+    # assert "expected" in result
+    pytest.skip("Implement domain-specific assertion for this incident")

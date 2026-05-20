@@ -1,0 +1,3 @@
+{"type":"tool_call","tool":"list_files","arguments":{"path":"src"},"step":1,"status":"ok"}
+{"type":"tool_call","tool":"read_file","arguments":{"path":"src/main.py"},"step":2,"status":"ok"}
+{"type":"tool_call","tool":"apply_patch","arguments":{"path":"src/main.py","diff":"..."},"step":3,"status":"ok"}

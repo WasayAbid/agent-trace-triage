@@ -1,0 +1,43 @@
+{
+  "messages": [
+    {
+      "role": "assistant",
+      "tool_calls": [
+        {
+          "id": "call_1",
+          "type": "function",
+          "function": {
+            "name": "search_kb",
+            "arguments": "{\"q\":\"refund policy\"}"
+          }
+        }
+      ]
+    },
+    {
+      "role": "assistant",
+      "tool_calls": [
+        {
+          "id": "call_2",
+          "type": "function",
+          "function": {
+            "name": "search_kb",
+            "arguments": "{\"q\":\"refund policy\"}"
+          }
+        }
+      ]
+    },
+    {
+      "role": "assistant",
+      "tool_calls": [
+        {
+          "id": "call_3",
+          "type": "function",
+          "function": {
+            "name": "search_kb",
+            "arguments": "{\"q\":\"refund policy\"}"
+          }
+        }
+      ]
+    }
+  ]
+}
