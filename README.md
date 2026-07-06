@@ -20,11 +20,6 @@ No npm dependencies. Node.js 18+ only.
 
 Clone into your repo or add as submodule, then in Claude Code:
 
-```text
-/plugin marketplace add /path/to/Cluade-Code-Skill
-/plugin install agent-trace-triage@<marketplace-name>
-```
-
 Or copy the skill only:
 
 ```bash
