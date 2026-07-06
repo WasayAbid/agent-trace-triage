@@ -3,14 +3,8 @@
 ## Option A — Project plugin (team)
 
 1. Add this repo to your project (submodule or copy).
-2. In Claude Code:
 
-   ```text
-   /plugin marketplace add ./path-to/Cluade-Code-Skill
-   /plugin install agent-trace-triage@agent-trace-triage-marketplace
-   ```
-
-3. Invoke:
+2. Invoke:
 
    ```text
    /agent-trace-triage path/to/trace.jsonl
